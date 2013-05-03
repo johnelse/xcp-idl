@@ -30,6 +30,14 @@ Library xcp_network
   Modules:            Network_interface, Network_client
   BuildDepends:       xcp, threads, rpclib, rpclib.syntax
 
+Library xcp_rrdd
+  CompiledObject:     best
+  Path:               rrdd
+  Findlibname:        rrdd
+  Findlibparent:      xcp
+  Modules:            Data_source, Ds, Rrdd_interface, Rrdd_client
+  BuildDepends:       xcp, threads, rpclib, rpclib.syntax, xcp-rrd
+
 Library xcp_xen
   CompiledObject:     best
   Path:               xen
