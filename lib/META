@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 0e6354699875401ab498e5f4f8a2499b)
+# DO NOT EDIT (digest: 437a8d6591a41b6f8837bca877675f91)
 version = "0.1"
 description = "Interface definitions for XCP hosts"
 requires =
@@ -29,6 +29,17 @@ package "storage" (
  archive(native) = "xcp_storage.cmxa"
  archive(native, plugin) = "xcp_storage.cmxs"
  exists_if = "xcp_storage.cma"
+)
+
+package "rrdd" (
+ version = "0.1"
+ description = "Interface definitions for XCP hosts"
+ requires = "xcp threads rpclib rpclib.syntax xcp-rrd"
+ archive(byte) = "xcp_rrdd.cma"
+ archive(byte, plugin) = "xcp_rrdd.cma"
+ archive(native) = "xcp_rrdd.cmxa"
+ archive(native, plugin) = "xcp_rrdd.cmxs"
+ exists_if = "xcp_rrdd.cma"
 )
 
 package "network" (

@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 2eda712fade1eae33343162485425677)
+# DO NOT EDIT (digest: f4676d0796fbeb66ccf6ae12c18d8308)
 # Ignore VCS directories, you can use the same kind of rule outside 
 # OASIS_START/STOP if you want to exclude directories that contains 
 # useless stuff for the build process
@@ -49,6 +49,24 @@
 <network/*.ml{,i}>: pkg_message_switch
 <network/*.ml{,i}>: pkg_message_switch.unix
 <network/*.ml{,i}>: pkg_fd-send-recv
+# Library xcp_rrdd
+"rrdd/xcp_rrdd.cmxs": use_xcp_rrdd
+<rrdd/*.ml{,i}>: use_xcp
+<rrdd/*.ml{,i}>: pkg_threads
+<rrdd/*.ml{,i}>: pkg_rpclib
+<rrdd/*.ml{,i}>: pkg_rpclib.syntax
+<rrdd/*.ml{,i}>: pkg_xcp-rrd
+<rrdd/*.ml{,i}>: pkg_uri
+<rrdd/*.ml{,i}>: pkg_re
+<rrdd/*.ml{,i}>: pkg_cohttp
+<rrdd/*.ml{,i}>: pkg_xmlm
+<rrdd/*.ml{,i}>: pkg_unix
+<rrdd/*.ml{,i}>: pkg_rpclib.xml
+<rrdd/*.ml{,i}>: pkg_rpclib.js
+<rrdd/*.ml{,i}>: pkg_syslog
+<rrdd/*.ml{,i}>: pkg_message_switch
+<rrdd/*.ml{,i}>: pkg_message_switch.unix
+<rrdd/*.ml{,i}>: pkg_fd-send-recv
 # Library xcp_xen
 "xen/xcp_xen.cmxs": use_xcp_xen
 <xen/*.ml{,i}>: use_xcp
